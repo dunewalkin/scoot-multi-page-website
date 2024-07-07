@@ -1,0 +1,151 @@
+@use "../abstracts/mixins" as *;
+
+// Header
+
+// .overlay {
+//    display: none;
+
+//    @include mq (medium-extra) {
+//       display: block;
+//       @include position(absolute, 0, 0, 0, 0);
+//       @include width-height(100vh, 100vh);
+//       background: hsla(0, 0%, 0%, 1);
+//       opacity: 0.7473;
+//       z-index: -1;
+//    }
+// }
+
+// Hero
+
+.pseudo-image-left {
+   @include width-height(100%, auto);
+   @include position(absolute, 53%, auto, auto, 0);
+
+   @include mq(large) {
+      @include position(absolute, 53%, auto, auto, -10%);
+   }
+
+   @include mq(medium) {
+      display: none;
+   }
+}
+
+.pseudo-images-right {
+   @include width-height(100%, auto);
+   @include flexbox(row, start, end, 6.41rem);
+   @include position(absolute, 53.2%, auto, auto, 43rem);
+
+   @include mq(large) {
+      @include position(absolute, 53.2%, auto, auto, 38rem);
+   }
+
+   @include mq(medium) {
+      position: inherit;
+   }
+}
+
+// How it works
+
+.circle-item-last {
+   position: relative;
+
+   &::after {
+   content: '';
+   position: absolute;
+   top: 2.53rem; 
+   right: 6rem;
+   width: calc(100vw - 10.31rem); 
+   height: 0.9375rem;
+   background: var(--clr-neutral-3);
+   z-index: -1;
+
+      @include mq(medium) {
+         top: auto;
+         right: 2.53rem;
+         width: 0.9375rem;
+         height: 40rem;
+         bottom: 5.5rem;
+      }
+
+      @include mq(small) {
+         display: none;
+      }
+   }
+}
+
+// Info
+
+.pseudo-circle-right {
+   @include pseudo-circle(right, -31.8rem);
+}
+
+.pseudo-circle-left {
+   @include pseudo-circle(right, 31.8rem);
+}
+
+.arrow-big {
+   position: relative;
+
+   &::before {
+      content: '';
+      background: url(../../assets/images/patterns/left-downward-arrow.svg);
+      @include position(absolute, auto, -10.31rem, 0, auto);
+      @include width-height(50vw, 9.4rem);
+      background-repeat: no-repeat;
+      z-index: 10;
+
+      @include mq(medium) {
+         @include width-height(46rem, 9.4rem);
+         @include position(absolute, auto, auto, 0, 8rem);
+      }
+   }
+}
+
+.arrow-small-right {
+position: relative;
+
+   &::before {
+      content: '';
+      background: url(../../assets/images/patterns/right-arrow.svg);
+      position: absolute;
+      top: 0;
+      left: -16rem;
+      @include width-height(100%, 100%);
+      background-repeat: no-repeat;
+      z-index: 10;
+
+      @include mq(medium) {
+         left: -10rem;
+      }
+
+      @include mq(small) {
+         left: -13rem;
+         @include width-height(30rem, 100%);
+      }
+   }
+} 
+
+.arrow-small-left {
+position: relative;
+
+   &::before {
+      content: '';
+      background: url(../../assets/images/patterns/right-arrow.svg);
+      position: absolute;
+      top: 17%;
+      right: -16rem;
+      @include width-height(100%, 100%);
+      background-repeat: no-repeat;
+      z-index: 10;
+      transform: rotateY(180deg);
+
+      @include mq(medium) {
+         right: -10rem;
+      }
+
+      @include mq(small) {
+         right: -13rem;
+         @include width-height(30rem, 100%);
+      }
+   }
+} 

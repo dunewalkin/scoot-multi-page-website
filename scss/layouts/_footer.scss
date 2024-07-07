@@ -1,0 +1,106 @@
+@use "../abstracts/mixins" as *;
+
+.footer-top {
+   @include width-height(100%, 18.75rem);
+   @include flexbox(row, space-between, center, 2rem);
+   background: var(--clr-neutral-1);
+   background-image: url(../../assets/images/patterns/semi-circles.svg);
+   background-repeat: no-repeat;
+   background-position: 160% bottom;
+
+   @include mq(medium) {
+      @include flexbox(column, center, center, 2.5rem);
+      text-align: center;
+      background-position: center bottom;
+   }
+
+   @include mq(small) {
+      background-position: 78% bottom;
+   }
+}
+
+
+
+.footer-nav-wrapper {
+   @include width-height(100%, 6rem);
+   @include flexbox(row, space-between, center, 3.64rem);
+
+   @include mq(medium) {
+      @include flexbox(row, space-between, center, clamp(1.5rem, 3vw, 3.64rem));
+      @include width-height(100%, 6rem);
+   }
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 5.31rem);
+      @include width-height(100%, auto);
+      padding-block: 4rem 5.5rem;
+   }
+}
+
+.footer-nav {
+   @include flexbox(row, space-between, center, 3.64rem);
+
+   @include mq(medium) {
+      @include flexbox(row, space-between, center, clamp(1.5rem, 3vw, 3.64rem));
+   }
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 2.59rem);
+   }
+}
+
+.footer-logo img {
+   @include width-height(6.73856rem, 1.785rem);
+}
+
+.footer-navigation {
+   @include flexbox(row, space-between, center, 2rem);
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 1rem);
+   }
+}
+
+.footer-navigation a {
+   color: var(--clr-neutral-2);
+   transition: .2s ease;
+
+   &:hover,
+   &:focus {
+      color: var(--clr-primary-1);
+   }
+}
+
+.footer-top h4 {
+   max-width: 25.9375rem;
+   color: var(--clr-primary-2);
+}
+
+.download-app {
+   @include flexbox(row, space-between, center, 1.12rem);
+}
+
+.download-app img {
+   @include width-height(9.9375rem, 3.5rem);
+
+   @include mq(small) {
+      @include width-height(7.09819rem, 2.5rem);
+   }
+}
+
+.footer-bottom {
+   background: var(--clr-neutral-6);
+}
+
+.social-media-wrapper {
+   @include flexbox(row, start, center, 1.5rem);
+}
+
+.social-media-item svg {
+   fill: var(--clr-primary-1);
+
+   &:hover,
+   &:focus {
+      fill: var(--clr-neutral-3);
+   }
+} 

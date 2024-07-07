@@ -1,0 +1,16 @@
+@use "../abstracts/mixins" as *;
+
+.primary-btn {
+   display: inline-block;
+   @include flexbox(row, center, center, 0);
+   @include width-height(11.25rem, 3.3125rem);
+   border: 3px solid var(--clr-primary-1);
+   background: var(--clr-primary-1);
+   color: var(--clr-primary-2);
+
+   &:hover,
+   &:focus {
+      background: transparent;
+      color: var(--clr-primary-1);
+   }
+}

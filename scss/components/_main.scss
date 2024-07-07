@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as *;
+
+.main-wrapper {
+   @include width-height(100%, auto);
+   padding-inline: 10.31rem;
+
+   @include mq(large) {
+      padding-inline: 4.5rem;
+   }
+
+   @include mq(medium) {
+      padding-inline: 2.5rem;
+   }
+
+   @include mq(small) {
+      padding-inline: 2rem;
+   }
+}
+
+main {
+   margin-top: 6rem;
+
+   @include mq(medium-extra) {
+      margin-top: 4rem;
+   }
+}
+
+
+   // padding-inline: clamp(4.5rem, 8vw, 10.31rem);
+   // padding-inline: clamp(4.5rem, 5vw + 2rem, 10.31rem);
+

@@ -1,0 +1,127 @@
+@use "../abstracts/mixins" as *;
+
+.header-wrapper {
+    @include width-height(100%, 6rem);
+    @include flexbox(row, space-between, center, 3.64rem);
+    @include position(absolute, 0, auto, auto, 0);
+    padding-inline: 10.31rem;
+    background: var(--clr-primary-2);
+    z-index: 100;
+
+    @include mq(large) {
+        padding-inline: 4.5rem;
+    }
+
+    @include mq(medium) {
+        padding-inline: 2.5rem;
+    }
+
+    @include mq(medium-extra) {
+        @include width-height(100%, 4rem);
+        @include position(absolute, 0, auto, auto, 0);
+        @include flexbox(row, center, center, 0);
+    }
+}
+
+.header-wrapper[data-visible="true"] {
+    @include mq(medium-extra) {
+        @include position(fixed, 0, auto, auto, 0);
+    }
+}
+
+.header-nav[data-visible="true"] {
+    @include mq(medium-extra) {
+        display: block;
+        @include position(fixed, 4rem, 0, auto, 0);
+        @include width-height(70%, 100vh);
+        @include flexbox(column, space-between, flex-start, 2rem);
+        padding: 4rem 2rem 8rem;
+        z-index: 101; // Ensure this is above overlay
+        background: var(--clr-neutral-6);
+    }
+}
+
+.header-nav[data-visible="false"] {
+    width: 100%;
+    @include flexbox(row, space-between, center, 3.64rem);
+
+    @include mq(medium) {
+        @include flexbox(row, space-between, center, clamp(1.5rem, 3vw, 3.64rem));
+    }
+
+    @include mq(medium-extra) {
+        display: none;
+    }
+}
+
+.header-navigation {
+    @include flexbox(row, space-between, center, 2rem);
+
+    @include mq(medium-extra) {
+        @include flexbox(column, start, start, 1.5rem);
+    }
+}
+
+.header-navigation a {
+    color: var(--clr-neutral-2);
+    transition: .2s ease;
+
+    @include mq(medium-extra) {
+        font-family: "Space Mono";
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5625rem;
+        color: var(--clr-neutral-3);
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--clr-primary-1);
+    }
+}
+
+.header-logo img {
+    @include width-height(6.73856rem, 1.785rem);
+
+    @include mq(medium-extra) {
+        @include width-height(4.71888rem, 1.25rem);
+    }
+}
+
+.mobile-nav-toggle {
+    display: none;
+
+    @include mq(medium-extra) {
+        display: block;
+        @include position(absolute, 1.5rem, auto, auto, 2rem);
+        @include width-height(1.23075rem, 1rem);
+        background-image: url(../../assets/images/icons/hamburger.svg);
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        z-index: 102; // Ensure this is above overlay
+    }
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+    @include width-height(1.125rem, 1.125rem);
+    background-image: url(../../assets/images/icons/close.svg);
+}
+
+
+.overlay {
+   display: none;
+}
+
+.overlay[data-visible="true"]{
+
+    @include mq(medium-extra) {
+        display: block;
+        @include position(fixed, 4rem, 0, 0, 0); // Ensure it's fixed to cover entire viewport
+        @include width-height(100vh, 100vh);
+        background: hsla(0, 0%, 0%, 1);
+        opacity: 0.7473;
+        z-index: 99; // Ensure this is below header-nav and above other content
+    }
+}

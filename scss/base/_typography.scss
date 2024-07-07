@@ -1,0 +1,72 @@
+@use '../abstracts/mixins' as *;
+
+.heading-xl {
+   font-family: "Space Mono";
+   font-size: 3.5rem;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 3.5rem;
+   letter-spacing: -0.15625rem;
+
+   @include mq(small) {
+      font-size: 2.5rem;
+      line-height: 2.5rem; /* 100% */
+      letter-spacing: -0.11163rem;   
+   }
+}
+
+.heading-l {
+   font-family: "Space Mono";
+   font-size: 3rem;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 3rem; /* 100% */
+   letter-spacing: -0.13394rem;
+
+   @include mq(small) {
+      font-size: 2rem;
+      line-height: 2rem; /* 100% */
+      letter-spacing: -0.08931rem;  
+   }
+}
+
+.heading-m {
+   font-family: "Space Mono";
+   font-size: 2.5rem;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 3rem; /* 120% */
+   letter-spacing: -0.11163rem;
+}
+
+
+.heading-s {
+   font-family: "Space Mono";
+   font-size: 1.5rem;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 1.75rem; /* 116.667% */
+   letter-spacing: -0.06694rem;
+
+   @include mq(small) {
+      font-size: 1.25rem;
+      line-height: 1.75rem; /* 140% */
+      letter-spacing: -0.05581rem; 
+   }
+}
+
+.body-text,
+p {
+   font-family: "Lexend Deca";
+   font-size: 0.9375rem;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 1.5625rem; 
+
+   @include mq(small) {
+      font-size: 0.9375rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5625rem;  
+   }
+} 
