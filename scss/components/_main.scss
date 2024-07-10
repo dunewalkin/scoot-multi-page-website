@@ -25,6 +25,41 @@ main {
    }
 }
 
+.hero-small {
+   position: relative;
+   overflow: hidden;
+   @include width-height(100%, 12.5rem);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   @include flexbox(row, start, center, 0);
+
+   @include mq(small) {
+      @include flexbox(row, center, center, 0);
+      @include width-height(100%, 10rem);
+   }
+
+   &::after {
+      display: block;
+      content: '';
+      background: url(../../assets/images/patterns/white-circles.svg);
+      position: absolute;
+      top: 4.28rem;
+      right: -1.9rem;
+      @include width-height(14.625rem, 3.9375rem);
+      background-repeat: no-repeat;
+
+      @include mq(small) {
+         display: none;
+      }
+   }
+}
+
+.hero-small h1 {
+   color: var(--clr-primary-2);
+}
+
+
 
    // padding-inline: clamp(4.5rem, 8vw, 10.31rem);
    // padding-inline: clamp(4.5rem, 5vw + 2rem, 10.31rem);

@@ -4,102 +4,326 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+   <script src="./js/main.js" defer></script>
   
-  <title>Frontend Mentor | Scoot About</title>
+  <title>Scoot</title>
 </head>
 <body>
 
-  About
-  Location
-  Careers
+   <div class="main-wrapper">
+      <header class="header-wrapper" data-visible="false">
+         <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"></button>
+         <div class="header-logo">
+             <img src="./assets/images/icons/scoot-dark.svg" alt="Logo Icon">
+         </div>
+     
+         <div class="header-nav" data-visible="false">
+            <nav>
+               <ul class="header-navigation">
+                  <li class="nav-item">
+                        <a href="about.html" class="body-text">About</a>
+                  </li>
+                  <li class="nav-item">
+                        <a href="locations.html" class="body-text">Locations</a>
+                  </li>
+                  <li class="nav-item">
+                        <a href="careers.html" class="body-text">Careers</a>
+                  </li>
+               </ul>
+            </nav>
+     
+            <button class="primary-btn" id="get-scootin-btn">
+               <span class="body-text">Get Scootin</span>
+            </button>
+         </div>
+         <div class="overlay" data-visible="false"></div>
+     </header>
+     
+   </div>
 
-  Get Scootin
+  <main class="about-wrapper">
 
+   <section class="hero-small">
+      <div class="main-wrapper hero-small-title">
+         <h1 class="heading-xl">About</h1>
+      </div>
+   </section>
 
+   <section class="info-wrapper">
+      <div class="info-list main-wrapper">
 
-  About
+         <div class="info-item">
+            <div class="info-content">
+               <h3 class="heading-l">
+                  Mobility for the digital era
+               </h3>
+               <p>Getting around should be simple (and even fun!) for everyone. We embrace technology to provide low cost, smart access to scooters at your fingertips.</p>
+            </div>
+            <div class="info-pic-wrapper arrow-big pseudo-circle-right">
+               <img src="./assets/images/images/digital-era.jpg" alt="Mobile image">
+            </div>
+         </div>
 
+         <div class="info-item arrow-small-left">
+            <div class="info-pic-wrapper pseudo-circle-left">
+               <img src="./assets/images/images/better-living.jpg" alt="City image">
+            </div>
+            <div class="info-content">
+               <h3 class="heading-l">
+                  Better urban living
+               </h3>
+               <p>We’re helping connect cities and bring people closer together. Our scooters are also fully-electric and we offset the minimal carbon footprint for each ride.</p>
+            </div>
+         </div>
+      </div>
+   </section>
 
+   <section class="benefits-wrapper main-wrapper">
+      <div class="primary-header">
+         <h2 class="heading-l">
+            Our values
+         </h2>
+      </div>
 
-  Mobility for the digital era
+      <div class="benefits-list">
 
-  Getting around should be simple (and even fun!) for everyone. We embrace technology to 
-  provide low cost, smart access to scooters at your fingertips.
+         <div class="benefit-item">
+            <div class="benefit-pic-wrapper">
+               <img src="./assets/images/images/our-tech.jpg" alt="Tech image">
+               <div class="benefit-pseudo">
+                  <h3 class="heading-s">01</h3>
+               </div>
+            </div>
 
-  Better urban living
+            <div class="benefit-content">
+               <h3 class="heading-s">
+                  Our tech
+               </h3>
+               <p>We’re using cutting edge technology to drive accessible urban transportation forward. Our fully electric scooters are a joy to ride!</p>
+            </div>
+         </div>
 
-  We’re helping connect cities and bring people closer together. Our scooters are also 
-  fully-electric and we offset the minimal carbon footprint for each ride.
+         <div class="benefit-item">
+            <div class="benefit-pic-wrapper">
+               <img src="./assets/images/images/our-integrity.jpg" alt="Integrity image">
+               <div class="benefit-pseudo">
+                  <h3 class="heading-s">02</h3>
+               </div>
+            </div>
 
+            <div class="benefit-content">
+               <h3 class="heading-s">
+                  Our integrity
+               </h3>
+               <p>We are fully committed to deliver a great yet safe, sustainable micro-mobility experience in every city we serve.</p>
+            </div>
+         </div>
 
+         <div class="benefit-item">
+            <div class="benefit-pic-wrapper">
+               <img src="./assets/images/images/our-community.jpg" alt="Community image">
+               <div class="benefit-pseudo">
+                  <h3 class="heading-s">03</h3>
+               </div>
+            </div>
 
-  Our values
+            <div class="benefit-content">
+               <h3 class="heading-s">
+                  Our community
+               </h3>
+               <p>We support every community we serve. All workers are paid a living wage based on their location and are Scoot employees.</p>
+            </div>
+         </div>
+         
+      </div>
+   </section>
 
-  01
-  Our tech
-  We’re using cutting edge technology to drive accessible urban transportation forward. 
-  Our fully electric scooters are a joy to ride!
+   <section class="faq-wrapper main-wrapper">
+      <div class="primary-header">
+         <h2 class="heading-l">
+            FAQs
+         </h2>
+      </div>
 
-  02
-  Our integrity
-  We are fully committed to deliver a great yet safe, sustainable micro-mobility experience 
-  in every city we serve.
+    
+      <div class="faq-info-container">
+         <div class="faq-info-header">
+            <h3 class="heading-m">
+               How it works
+            </h3>
+         </div>
 
-  03
-  Our community
-  We support every community we serve. All workers are paid a living wage based on their 
-  location and are Scoot employees.
+         <div class="accordion-wrapper">
+            <ul role="list">
 
+               <li>
+                  <div class="faq-info-item">
+                     <button class="accordion" aria-expanded="false">
+                        <div class="faq-question">
+                           <span class="heading-s">How do I download the app?</span>
+                           <div class="chevron"></div>
+                        </div>
+                        <div id="desc1" class="description">
+                           <p class="desc-content">To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. 
+                           An even simpler way to do it would be to click the relevant link at the bottom of this page and you’ll be re-directed to the correct page.</p>
+                        </div>
+                     </button>
+                     
+                  </div>
+               </li>
+         
+               <li>
+                  <div class="faq-info-item">
+                     <button class="accordion" aria-expanded="false">
+                        <div class="faq-question">
+                           <span class="heading-s">Can I find a nearby Scoots?
+                           </span>
+                           <div class="chevron"></div>
+                        </div>
+                        <div id="desc2" class="description">
+                           <p class="desc-content">Definitely! Simply open up the app and allow us to find your location while using it. We'll 
+                           show you all of the closest Scoots and some extra useful information.</p>
+                        </div>
+                     </button>
+                     
+                  </div>
+               </li>
+         
+               <li>
+                  <div class="faq-info-item">
+                     <button class="accordion" aria-expanded="false">
+                        <div class="faq-question">
+                           <span class="heading-s">Do I need a license to ride?</span>
+                           <div class="chevron"></div>
+                        </div>
+                        <div id="desc3" class="description">
+                           <p class="desc-content">Yup! We provide information inside the app regarding local laws and the license you need to be 
+                           able to ride our Scoots.</p>
+                        </div>
+                     </button>
+                    
+                  </div>
+               </li>
+            </ul>      
+         </div>
+      </div>
+         
+      <div class="faq-info-container">
+         <div class="faq-info-header">
+            <h3 class="heading-m">Safe driving</h3>
+         </div>
+      
+         <div class="accordion-wrapper">
+            <ul role="list">
+               <li>
+                  <div class="faq-info-item">
+                     <button class="accordion" aria-expanded="false">
+                        <div class="faq-question">
+                           <span class="heading-s">Should I wear a helmet?</span>
+                           <div class="chevron"></div>
+                        </div>
+                        <div id="desc4" class="description">
+                           <p class="desc-content">Yes, please do! All cities have different laws. But we strongly strongly strongly recommend 
+                           always wearing a helmet regardless of the local laws. We like you and we want you to be as safe as possible while Scooting.</p>
+                        </div>
+                     </button>
+                    
+                  </div>
+               </li>
+      
+               <li>
+                  <div class="faq-info-item">
+                     <button class="accordion" aria-expanded="false">
+                        <div class="faq-question">
+                           <span class="heading-s">How about the rules & regulations?</span>                           
+                           <div class="chevron"></div>
+                        </div>
+                        <div id="desc5" class="description">
+                           <p class="desc-content">Now is not the time to be a rule breaker. Be sure you're complying with all local laws and 
+                           regulations. Also, just be a good human being. Be sure not to park your Scoot where it can block access to buildings or get in people's way.</p>
+                        </div>
+                     </button>
+                     
+                  </div>
+               </li>
+      
+               <li>
+                  <div class="faq-info-item">
+                     <button class="accordion" aria-expanded="false">
+                        <div class="faq-question">
+                           <span class="heading-s">What if I damage my Scoot?</span>
+                           <div class="chevron"></div>
+                        </div>
+                        <div id="desc6" class="description">
+                           <p class="desc-content">Be sure to read our terms and conditions carefully. Not the most fun job we know but we make 
+                           it as clear as possible. There's an option to add insurance for each trip, or you can sign up for annual insurance if you're a regular Scooter.</p>
+                        </div>
+                     </button>
+                     
+                  </div>
+               </li>
+            </ul>      
+         </div>
+      </div>
+         
+      
 
+         
+     
+   </section>
 
-  FAQs
+   <footer class="footer-wrapper">
+      <div class="footer-top main-wrapper">
+         <h4 class="heading-l">Sign up and Scoot off today</h4>
+         <div class="download-app" id="download-app">
+            <a href="#">
+               <img src="./assets/images/icons/app-store.svg" alt="App store icon">
+            </a>
 
-  How it works
+            <a href="#">
+               <img src="./assets/images/icons/google-play.svg" alt="Google play icon">
+            </a>
+         </div>
+      </div>
 
-  How do I download the app?
+      <div class="footer-bottom main-wrapper">
+         <div class="footer-nav-wrapper">
+            <div class="footer-nav">
+               <div class="footer-logo">
+                  <img src="./assets/images/icons/scoot-light.svg" alt="Logo Icon">
+               </div>
+   
+               <nav>
+                  <ul class="footer-navigation">
+                     <li class="nav-item">
+                        <a href="about.html" class="body-text">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="locations.html" class="body-text">Locations</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="careers.html" class="body-text">Careers</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
 
-  To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. 
-  An even simpler way to do it would be to click the relevant link at the bottom of this 
-  page and you’ll be re-directed to the correct page.
-
-  Can I find a nearby Scoots?
-
-  Definitely! Simply open up the app and allow us to find your location while using it. We'll 
-  show you all of the closest Scoots and some extra useful information. 
-
-  Do I need a license to ride?
-
-  Yup! We provide information inside the app regarding local laws and the license you need to be 
-  able to ride our Scoots.
-
-  Safe driving
-
-  Should I wear a helmet?
-
-  Yes, please do! All cities have different laws. But we strongly strongly strongly recommend 
-  always wearing a helmet regardless of the local laws. We like you and we want you to be as 
-  safe as possible while Scooting.
-
-  How about the rules & regulations?
-
-  Now is not the time to be a rule breaker. Be sure you're complying with all local laws and 
-  regulations. Also, just be a good human being. Be sure not to park your Scoot where it can 
-  block access to buildings or get in people's way.
-
-  What if I damage my Scoot?
-
-  Be sure to read our terms and conditions carefully. Not the most fun job we know but we make 
-  it as clear as possible. There's an option to add insurance for each trip, or you can sign 
-  up for annual insurance if you're a regular Scooter.
-
-  Sign up and Scoot off today
-
-
-
-  About
-  Location
-  Careers
+            <div class="social-media-wrapper">
+               <a class="social-media-item" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+               </a>
+               <a class="social-media-item" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20"><path d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"/></svg>
+               </a>
+               <a class="social-media-item" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+               </a>
+            </div>
+         </div>
+      </div>
+   </footer>
+  </main>
 
 </body>
 </html>

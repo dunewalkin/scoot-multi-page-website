@@ -89,41 +89,10 @@
    &::before {
       content: '';
       background: url(../../assets/images/patterns/left-downward-arrow.svg);
-      @include position(absolute, auto, -10.31rem, 0, auto);
-      @include width-height(50vw, 9.4rem);
       background-repeat: no-repeat;
       z-index: 10;
-
-      @include mq(medium) {
-         @include width-height(46rem, 9.4rem);
-         @include position(absolute, auto, auto, 0, 8rem);
-      }
    }
 }
-
-.arrow-small-right {
-position: relative;
-
-   &::before {
-      content: '';
-      background: url(../../assets/images/patterns/right-arrow.svg);
-      position: absolute;
-      top: 0;
-      left: -16rem;
-      @include width-height(100%, 100%);
-      background-repeat: no-repeat;
-      z-index: 10;
-
-      @include mq(medium) {
-         left: -10rem;
-      }
-
-      @include mq(small) {
-         left: -13rem;
-         @include width-height(30rem, 100%);
-      }
-   }
-} 
 
 .arrow-small-left {
 position: relative;
@@ -131,21 +100,19 @@ position: relative;
    &::before {
       content: '';
       background: url(../../assets/images/patterns/right-arrow.svg);
-      position: absolute;
-      top: 17%;
-      right: -16rem;
-      @include width-height(100%, 100%);
+      background-repeat: no-repeat;
+      z-index: 10;
+   }
+} 
+
+.arrow-small-right {
+position: relative;
+
+   &::before {
+      content: '';
+      background: url(../../assets/images/patterns/right-arrow.svg);
       background-repeat: no-repeat;
       z-index: 10;
       transform: rotateY(180deg);
-
-      @include mq(medium) {
-         right: -10rem;
-      }
-
-      @include mq(small) {
-         right: -13rem;
-         @include width-height(30rem, 100%);
-      }
    }
 } 

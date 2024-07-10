@@ -40,3 +40,28 @@ document.addEventListener('DOMContentLoaded', () => {
        downloadAppSection.scrollIntoView({ behavior: 'smooth' });
    });
 });
+
+const acc = document.querySelectorAll(".accordion");
+
+acc.forEach(button => {
+   button.addEventListener("click", function() {
+      const panel = this.querySelector('.description');
+      const chevron = this.querySelector('.chevron');
+      const isExpanded = this.getAttribute("aria-expanded") === "true";
+      
+      // Toggle the aria-expanded attribute
+      this.setAttribute("aria-expanded", !isExpanded);
+      
+      // Toggle the panel visibility
+      if (isExpanded) {
+         panel.classList.remove("show");
+         this.classList.remove("accordion-active");
+         chevron.classList.remove('chevron-active');
+      } else {
+         panel.classList.add("show");
+         this.classList.add("accordion-active");
+         chevron.classList.add('chevron-active');
+      }
+   });
+});
+

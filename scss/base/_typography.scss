@@ -37,6 +37,12 @@
    font-weight: 700;
    line-height: 3rem; /* 120% */
    letter-spacing: -0.11163rem;
+
+   @include mq(small) {
+      font-size: 1.5rem;
+      line-height: 1.75rem; /* 116.667% */
+      letter-spacing: -0.06694rem; 
+   }
 }
 
 
