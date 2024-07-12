@@ -1,0 +1,78 @@
+@use "../abstracts/mixins" as *;
+
+// Hero
+
+.careers-wrapper {
+   .hero-small {
+      background-image: url(../../assets/images/images/careers-locations-hero-desktop.jpg);
+
+      @include mq(medium) {
+         background-image: url(../../assets/images/images/careers-locations-hero-tablet.jpg);
+      }
+   
+      @include mq(small) {
+         background-image: url(../../assets/images/images/careers-location-hero-mobile.jpg);
+      }
+   }
+}
+
+// Info 
+
+.careers-wrapper {
+
+   .info-wrapper {
+      margin-block: 8rem 7.5rem;
+   }
+
+   .arrow-big {
+
+      &::before {
+         @include position(absolute, auto, -10.31rem, 2.41rem, auto);
+         @include width-height(50vw, 9.4rem);
+         transform: rotateX(180deg);
+   
+         @include mq(medium) {
+            @include width-height(46rem, 9.4rem);
+            @include position(absolute, auto, auto, 2.41rem, 8rem);
+         }
+      }
+   }
+
+   .info-item:first-child {
+      @include mq(medium) {
+         @include flexbox(column-reverse, center, center, 3.5rem);
+      }
+   }
+}
+
+// Job
+
+.job-wrapper {
+   margin-bottom: 10rem;
+}
+
+.job-list {
+   @include flexbox(column, center, center, 1.5rem);
+}
+
+.job-item {
+   @include width-height(100%, 8rem);
+   @include flexbox(row, space-between, center, 1.5rem);
+   padding-inline: 2.5rem;
+   background: var(--clr-neutral-4);
+
+   @include mq(small) {
+      @include width-height(100%, 11.875rem);
+      @include flexbox(column, center, center, 1.5rem);
+      padding-inline: 2rem;
+   }
+}
+
+.vacancy-item h4,
+.vacancy-item p {
+   color: var(--clr-neutral-1);
+
+   @include mq(small) {
+     text-align: center;
+   }
+}
