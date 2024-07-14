@@ -32,23 +32,57 @@ function closeMenu() {
     navToggle.setAttribute("aria-expanded", "false");
 }
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
    const downloadAppSection = document.getElementById('download-app');
    const getScootinBtns = document.querySelectorAll('.get-scootin-btn');
- 
+
+   // Custom smooth scroll function
+   function smoothScroll(target) {
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      const duration = 800; // Duration of scroll
+      let startTime = null;
+
+      function animation(currentTime) {
+         if (startTime === null) startTime = currentTime;
+         const timeElapsed = currentTime - startTime;
+         const run = ease(timeElapsed, startPosition, distance, duration);
+         window.scrollTo(0, run);
+         if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+
+      function ease(t, b, c, d) {
+         t /= d / 2;
+         if (t < 1) return c / 2 * t * t + b;
+         t--;
+         return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(animation);
+   }
+
    getScootinBtns.forEach(btn => {
-     btn.addEventListener('click', (e) => {
-       e.preventDefault();
-       downloadAppSection.scrollIntoView({ behavior: 'smooth' });
- 
-       if (window.innerWidth <= 600) {
-         closeMenu();
-       }
- 
-       btn.blur();
-     });
+      btn.addEventListener('click', (e) => {
+         e.preventDefault();
+
+         // Calculate the offset to center the section
+         const sectionRect = downloadAppSection.getBoundingClientRect();
+         const offset = sectionRect.top + window.scrollY - (window.innerHeight / 2) + (sectionRect.height / 2);
+         
+         smoothScroll(downloadAppSection); // Call the smoothScroll function
+
+         if (window.innerWidth <= 600) {
+            closeMenu();
+         }
+
+         btn.blur();
+      });
    });
- });
+});
+
  
 
 

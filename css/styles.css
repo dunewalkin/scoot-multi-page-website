@@ -171,10 +171,6 @@ p {
   color: var(--clr-primary-1);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .main-wrapper {
   width: 100%;
   height: auto;
