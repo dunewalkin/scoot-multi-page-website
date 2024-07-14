@@ -1790,17 +1790,6 @@ main {
   gap: 1.12rem;
 }
 
-.download-app img {
-  width: 9.9375rem;
-  height: 3.5rem;
-}
-@media (max-width: 37.5em) {
-  .download-app img {
-    width: 7.09819rem;
-    height: 2.5rem;
-  }
-}
-
 .footer-bottom {
   background: var(--clr-neutral-6);
 }
