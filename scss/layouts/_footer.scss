@@ -78,14 +78,6 @@
    @include flexbox(row, space-between, center, 1.12rem);
 }
 
-// .download-app img {
-//    @include width-height(9.9375rem, 3.5rem);
-
-//    @include mq(small) {
-//       @include width-height(7.09819rem, 2.5rem);
-//    }
-// }
-
 .footer-bottom {
    background: var(--clr-neutral-6);
 }
