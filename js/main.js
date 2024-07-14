@@ -2,6 +2,7 @@ const navToggle = document.querySelector(".mobile-nav-toggle");
 const headerNav = document.querySelector(".header-nav");
 const headerWrapper = document.querySelector(".header-wrapper");
 const overlay = document.querySelector('.overlay');
+const getScootinBtns = document.querySelectorAll('.get-scootin-btn');
 
 navToggle.addEventListener('click', () => {
     toggleVisibility(headerNav);
@@ -32,14 +33,22 @@ function closeMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-   const getScootinBtn = document.getElementById('get-scootin-btn');
    const downloadAppSection = document.getElementById('download-app');
 
-   getScootinBtn.addEventListener('click', (e) => {
-       e.preventDefault();
-       downloadAppSection.scrollIntoView({ behavior: 'smooth' });
+   getScootinBtns.forEach(btn => {
+       btn.addEventListener('click', (e) => {
+           e.preventDefault();
+           downloadAppSection.scrollIntoView({ behavior: 'smooth' });
+
+           if (window.innerWidth <= 600) {
+               closeMenu();
+           }
+
+           btn.blur();
+       });
    });
 });
+
 
 const acc = document.querySelectorAll(".accordion");
 
@@ -64,4 +73,6 @@ acc.forEach(button => {
       }
    });
 });
+
+ 
 

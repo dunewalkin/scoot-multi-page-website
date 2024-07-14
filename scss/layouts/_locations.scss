@@ -1,0 +1,184 @@
+@use "../abstracts/mixins" as *;
+
+// Hero
+
+.locations-wrapper {
+   .hero-small {
+      background-image: url(../../assets/images/images/careers-locations-hero-desktop.jpg);
+
+      @include mq(medium) {
+         background-image: url(../../assets/images/images/careers-locations-hero-tablet.jpg);
+      }
+   
+      @include mq(small) {
+         background-image: url(../../assets/images/images/careers-location-hero-mobile.jpg);
+      }
+   }
+}
+
+.map-wrapper {
+   width: 100%;
+   margin-block: 7.5rem;
+
+   @include mq(small) {
+      margin-block: 4.5rem;
+   }
+}
+
+.map {
+   position: relative;
+   width: 100%;
+   max-width: 69.375rem;
+   margin: 0 auto;
+}
+
+.map img {
+   @include width-height(100%, 100%);
+   object-fit: contain;
+}
+
+.point {
+   position: absolute;
+
+   @include mq(small) {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%; 
+      background-color: var(--clr-primary-1);
+   }
+   
+
+   &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      @include width-height(11.8125rem, 5.5rem); 
+      clip-path: path('M189 0H0V72H78L94 88L110 72H189V0Z');
+      background-color: var(--clr-primary-1); 
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+
+      @include mq(large) {
+         clip-path: path('M120 0H0V32H52L60 40L68 32H120V0Z');
+         @include width-height(7.5rem, 2.5rem); 
+      }
+
+      @include mq(small) {
+         display: none;
+         position: relative;
+      }
+   }
+}
+
+.point span {
+   color: var(--clr-neutral-1);
+   display: inline-block;
+   white-space: nowrap;
+   z-index: 10;
+   position: absolute;
+   left: 50%;
+   bottom: 2.37rem;
+   transform: translateX(-50%); 
+
+   @include mq(large) {
+      bottom: 0.65rem;
+      font-size: 0.8125rem;
+      line-height: 1.75rem; /* 215.385% */
+      letter-spacing: -0.03625rem;
+   }
+
+   @include mq(small) {
+      display: none;
+   }
+}
+
+.point-new-york {
+   top: 29%;
+   left: 22%;
+}
+
+.point-london {
+   top: 19.4%;
+   left: 44%;
+}
+
+.point-yokohama {
+   top: 30.6%;
+   left: 85.6%;
+}
+
+.point-jakarta {
+   top: 62.4%;
+   left: 78.5%;
+}
+
+.places-list {
+   display: none;
+
+   @include mq(small) {
+      display: block;
+      @include width-height(100%, auto);
+      @include flexbox(column, center, center, 1rem);
+      margin-top: 3rem;
+   }
+   
+}
+
+.place-item {
+   @include width-height(100%, auto);
+   background-color: hsla(var(--clr-primary-1-hsl), 0.15);
+   @include flexbox(column, center, center, 0);
+   padding-block: 1.37rem;
+}
+
+.place-item span {
+   color: var(--clr-neutral-1);
+}
+
+.request-wrapper {
+   @include width-height(100%, auto);
+   @include flexbox(row, space-between, center, 1rem);
+   margin-top: 7.5rem;
+
+   @include mq(medium) {
+      @include flexbox(column, center, center, 2.5rem);
+      margin-top: 4rem;
+   }
+
+}
+
+.request-content {
+   @include flexbox(row, start, center, 1.87rem);
+
+   @include mq(medium) {
+      @include flexbox(column, center, center, 2.5rem);
+      text-align: center;
+   }
+}
+
+.request-content h2 {
+   @include width-height(100%, auto);
+   max-width: 19rem;
+   color: var(--clr-neutral-1);
+
+   @include mq(medium) {
+      max-width: 28.5625rem;
+   }
+}
+
+.request-content p {
+   @include width-height(100%, auto);
+   max-width: 27.8125rem;
+   color: var(--clr-neutral-2);
+
+   @include mq(large) {
+      max-width: 19rem;
+   }
+
+   @include mq(medium) {
+      max-width: 35.8125rem;
+   }
+}
+

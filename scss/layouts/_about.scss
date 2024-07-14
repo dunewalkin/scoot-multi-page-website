@@ -83,10 +83,6 @@
    }
 }
 
-// .faq-info-wrapper {
-//    @include flexbox(column, center, center, 4rem);
-// }
-
 .faq-info-container {
    @include width-height(100%, auto);
    @include flexbox(row, center, start, 1.87rem);
@@ -120,15 +116,6 @@
 .accordion-wrapper ul {
    @include flexbox(column, center, start, 1rem);
 }
-
-// .faq-info-item {
-//    padding: 2rem 2.5rem;
-//    background-color: var(--clr-neutral-4);
-
-//    &:hover {
-//       background-color: var(--clr-neutral-5);
-//    }
-// }
 
 .accordion {
    position: relative;
