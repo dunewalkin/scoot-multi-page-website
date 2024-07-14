@@ -35,28 +35,21 @@ function closeMenu() {
 document.addEventListener('DOMContentLoaded', () => {
    const downloadAppSection = document.getElementById('download-app');
    const getScootinBtns = document.querySelectorAll('.get-scootin-btn');
-
-   // Ensure smooth scroll behavior
-   if (!CSS.supports('scroll-behavior', 'smooth')) {
-       import('https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js').then(() => {
-           smoothscroll.polyfill();
-       });
-   }
-
+ 
    getScootinBtns.forEach(btn => {
-       btn.addEventListener('click', (e) => {
-           e.preventDefault();
-           downloadAppSection.scrollIntoView({ behavior: 'smooth' });
-
-           if (window.innerWidth <= 600) {
-               closeMenu();
-           }
-
-           btn.blur();
-       });
+     btn.addEventListener('click', (e) => {
+       e.preventDefault();
+       downloadAppSection.scrollIntoView({ behavior: 'smooth' });
+ 
+       if (window.innerWidth <= 600) {
+         closeMenu();
+       }
+ 
+       btn.blur();
+     });
    });
-});
-
+ });
+ 
 
 
 const acc = document.querySelectorAll(".accordion");
