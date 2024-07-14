@@ -1,5 +1,9 @@
 @use "../abstracts/mixins" as *;
 
+html {
+   scroll-behavior: smooth;
+ }
+
 .main-wrapper {
    @include width-height(100%, auto);
    padding-inline: 10.31rem;

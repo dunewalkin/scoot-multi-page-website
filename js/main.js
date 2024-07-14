@@ -34,6 +34,14 @@ function closeMenu() {
 
 document.addEventListener('DOMContentLoaded', () => {
    const downloadAppSection = document.getElementById('download-app');
+   const getScootinBtns = document.querySelectorAll('.get-scootin-btn');
+
+   // Ensure smooth scroll behavior
+   if (!CSS.supports('scroll-behavior', 'smooth')) {
+       import('https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js').then(() => {
+           smoothscroll.polyfill();
+       });
+   }
 
    getScootinBtns.forEach(btn => {
        btn.addEventListener('click', (e) => {
@@ -48,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
        });
    });
 });
+
 
 
 const acc = document.querySelectorAll(".accordion");
