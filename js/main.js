@@ -102,15 +102,6 @@ acc.forEach(button => {
    });
 });
 
-// document.addEventListener('DOMContentLoaded', function () {
-//    AOS.init({
-//      duration: 700, 
-//      easing: 'ease-in-out',
-//      once: true,
-//      mirror: false
-//    });
-//  });
-
  document.addEventListener('DOMContentLoaded', () => {
    AOS.init({
      disable: () => window.innerWidth < 56.25 * parseFloat(getComputedStyle(document.documentElement).fontSize),
