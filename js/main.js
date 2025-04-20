@@ -102,7 +102,7 @@ acc.forEach(button => {
    });
 });
 
- document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
    AOS.init({
      disable: () => window.innerWidth < 56.25 * parseFloat(getComputedStyle(document.documentElement).fontSize),
      duration: 700,
@@ -111,6 +111,7 @@ acc.forEach(button => {
      mirror: false
    });
  });
+ 
 
 
 
