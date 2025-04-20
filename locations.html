@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./css/styles.css">
-   <script src="./js/main.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="./js/main.js" defer></script>
   
   <title>Scoot</title>
 </head>
@@ -53,19 +56,20 @@
    </section>
 
    <section class="map-wrapper main-wrapper">
-      <div class="map">
+      <div class="map" data-aos="fade-in" data-aos-delay="100">
          <img src="./assets/images/images/world-map-desktop.png" alt="Map">  
 
-         <div class="point point-new-york">
+         <div class="point point-new-york" data-aos="fade-in" data-aos-delay="300">
             <span class="heading-s">New York</span>
          </div>
-         <div class="point point-london">
+         <div class="point point-london" data-aos="fade-in" data-aos-delay="400">
             <span class="heading-s">London</span>
          </div>
-         <div class="point point-yokohama">
+         <div class="point point-yokohama" data-aos="fade-in" data-aos-delay="500">
             <span class="heading-s">Yokohama</span>
          </div>
-         <div class="point point-jakarta">
+         <div class="point point-jakarta" data-aos="fade-in" data-aos-delay="600" data-aos-offset="0"
+         data-aos-anchor-placement="top-bottom">
             <span class="heading-s">Jakarta</span>
          </div>
 

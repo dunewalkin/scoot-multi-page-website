@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="./css/styles.css">
+   <link rel="stylesheet" href="./css/styles.css">
+   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
    <script src="./js/main.js" defer></script>
   
   <title>Scoot</title>
@@ -50,16 +52,16 @@
    <section class="hero-section main-wrapper">
     
       <div class="hero-content">
-         <h1 class="heading-xl">Scooter sharing made simple</h1>
-         <p class="hero-main-content">Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!</p>
-         <button class="primary-btn get-scootin-btn">
+         <h1 class="heading-xl" data-aos="fade-in" data-aos-delay="200">Scooter sharing made simple</h1>
+         <p class="hero-main-content" data-aos="fade-in" data-aos-delay="200">Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!</p>
+         <button class="primary-btn get-scootin-btn" data-aos="fade-in" data-aos-delay="200">
             <span class="body-text">Get Scootin</span>
          </button>
 
-         <div class="pseudo-image-left">
+         <div class="pseudo-image-left" data-aos="fade-right" data-aos-delay="600">
             <img src="./assets/images/patterns/line.svg" alt="Line">
          </div>
-         <div class="pseudo-images-right">
+         <div class="pseudo-images-right" data-aos="fade-left" data-aos-delay="600">
             <img class="arrow-right" src="./assets/images/patterns/right-arrow.svg" alt="Right arrow icon">
             <img class="white-circles" src="./assets/images/patterns/white-circles.svg" alt="White circles icon">
          </div>
@@ -68,7 +70,7 @@
    </section>
 
    <section class="how-it-works-wrapper main-wrapper">
-      <ul class="how-it-works-list">
+      <ul class="how-it-works-list" data-aos="fade-right" data-aos-delay="100" data-aos-offset="200">
          <li class="how-it-works-item">
             <div class="circle-item">
                <img src="./assets/images/icons/locate.svg" alt="Locate">
@@ -103,7 +105,7 @@
       <div class="info-list main-wrapper">
 
          <div class="info-item">
-            <div class="info-content">
+            <div class="info-content" data-aos="fade-right" data-aos-delay="100" data-aos-offset="200">
                <h3 class="heading-l">
                   Easy to use riding telemetry
                </h3>
@@ -112,16 +114,16 @@
                   <span class="body-text">Learn More</span>
                </a>
             </div>
-            <div class="info-pic-wrapper arrow-big pseudo-circle-right">
+            <div class="info-pic-wrapper arrow-big pseudo-circle-right" data-aos="fade-left" data-aos-delay="300" data-aos-offset="200">
                <img src="./assets/images/images/telemetry.jpg" alt="Telemetry">
             </div>
          </div>
 
-         <div class="info-item arrow-small-left">
-            <div class="info-pic-wrapper pseudo-circle-left">
+         <div class="info-item " >
+            <div class="info-pic-wrapper pseudo-circle-left arrow-small-left" data-aos="fade-right" data-aos-delay="300" data-aos-offset="200">
                <img src="./assets/images/images/near-you.jpg" alt="City">
             </div>
-            <div class="info-content">
+            <div class="info-content" data-aos="fade-left" data-aos-delay="100" data-aos-offset="200">
                <h3 class="heading-l">
                   Coming to a city near you
                </h3>
@@ -132,8 +134,8 @@
             </div>
          </div>
 
-         <div class="info-item arrow-small-right">
-            <div class="info-content">
+         <div class="info-item ">
+            <div class="info-content" data-aos="fade-right" data-aos-delay="100" data-aos-offset="200">
                <h3 class="heading-l">
                   Zero hassle payments
                </h3>
@@ -142,7 +144,7 @@
                   <span class="body-text">Learn More</span>
                </a>
             </div>
-            <div class="info-pic-wrapper pseudo-circle-right">
+            <div class="info-pic-wrapper pseudo-circle-right arrow-small-right" data-aos="fade-left" data-aos-delay="300" data-aos-offset="200">
                <img src="./assets/images/images/payments.jpg" alt="Payment">
             </div>
          </div>

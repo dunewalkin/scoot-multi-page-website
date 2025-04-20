@@ -32,32 +32,6 @@ function closeMenu() {
     navToggle.setAttribute("aria-expanded", "false");
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const downloadAppSection = document.getElementById('download-app');
-//   const getScootinBtns = document.querySelectorAll('.get-scootin-btn');
-
-//   getScootinBtns.forEach(btn => {
-//     btn.addEventListener('click', (e) => {
-//       e.preventDefault();
-
-//       // Calculate the offset to center the section
-//       const sectionRect = downloadAppSection.getBoundingClientRect();
-//       const offset = sectionRect.top + window.scrollY - (window.innerHeight / 2) + (sectionRect.height / 2);
-      
-//       window.scrollTo({
-//         top: offset,
-//         behavior: 'smooth'
-//       });
-
-//       if (window.innerWidth <= 600) {
-//         closeMenu();
-//       }
-
-//       btn.blur();
-//     });
-//   });
-// });
-
 document.addEventListener('DOMContentLoaded', () => {
    const downloadAppSection = document.getElementById('download-app');
    const getScootinBtns = document.querySelectorAll('.get-scootin-btn');
@@ -114,10 +88,8 @@ acc.forEach(button => {
       const chevron = this.querySelector('.chevron');
       const isExpanded = this.getAttribute("aria-expanded") === "true";
       
-      // Toggle the aria-expanded attribute
       this.setAttribute("aria-expanded", !isExpanded);
       
-      // Toggle the panel visibility
       if (isExpanded) {
          panel.classList.remove("show");
          this.classList.remove("accordion-active");
@@ -129,6 +101,28 @@ acc.forEach(button => {
       }
    });
 });
+
+// document.addEventListener('DOMContentLoaded', function () {
+//    AOS.init({
+//      duration: 700, 
+//      easing: 'ease-in-out',
+//      once: true,
+//      mirror: false
+//    });
+//  });
+
+ document.addEventListener('DOMContentLoaded', () => {
+   AOS.init({
+     disable: () => window.innerWidth < 56.25 * parseFloat(getComputedStyle(document.documentElement).fontSize),
+     duration: 700,
+     easing: 'ease-in-out',
+     once: true,
+     mirror: false
+   });
+ });
+
+
+
 
  
 

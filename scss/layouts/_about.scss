@@ -33,13 +33,16 @@
    .arrow-big {
 
       &::before {
-         @include position(absolute, auto, -10.31rem, 2.41rem, auto);
-         @include width-height(50vw, 9.4rem);
+         @include position(absolute, auto, auto, 0, -8rem);
+         @include width-height(300%, 9.4rem);
          transform: rotateX(180deg);
+
+         @include mq(x-large) {
+            @include position(absolute, auto, auto, 0, -2rem);
+         }
    
          @include mq(medium) {
-            @include width-height(46rem, 9.4rem);
-            @include position(absolute, auto, auto, 2.41rem, 8rem);
+            @include position(absolute, auto, auto, 0, 0);
          }
       }
    }
@@ -47,15 +50,12 @@
    .arrow-small-left {
 
       &::before {
-         @include position(absolute, 0, auto, auto, -16rem);
-         @include width-height(100%, 100%);
-   
-         @include mq(medium) {
-            @include position(absolute, 0, auto, auto, -10rem);
-         }
+         @include position(absolute, 0, auto, auto, auto);
+         @include width-height(140%, 100%);
+         transform: translateX(-13rem);
    
          @include mq(small) {
-            @include position(absolute, 0, auto, auto, -13rem);
+            transform: translateX(-9rem);
             @include width-height(30rem, 100%);
          }
       }

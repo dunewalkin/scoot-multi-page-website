@@ -222,4 +222,13 @@ main {
 }
 
 
+//aos
+
+@media (max-width: 56.25em) {
+   [data-aos] {
+   opacity: 1 !important;
+   transform: none !important;
+   }
+}
+
 

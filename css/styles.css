@@ -462,6 +462,12 @@ main {
   color: var(--clr-neutral-2);
 }
 
+@media (max-width: 56.25em) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 .pseudo-image-left {
   width: 100%;
   height: auto;
@@ -1035,21 +1041,19 @@ main {
 .home-wrapper .arrow-big::before {
   position: absolute;
   top: auto;
-  right: -10.31rem;
+  right: auto;
   bottom: 0;
-  left: auto;
-  width: 50vw;
+  left: -8rem;
+  width: 300%;
   height: 9.4rem;
 }
 @media (max-width: 56.25em) {
   .home-wrapper .arrow-big::before {
-    width: 46rem;
-    height: 9.4rem;
     position: absolute;
     top: auto;
     right: auto;
     bottom: 0;
-    left: 8rem;
+    left: 0;
   }
 }
 .home-wrapper .arrow-small-left::before {
@@ -1057,26 +1061,14 @@ main {
   top: 0;
   right: auto;
   bottom: auto;
-  left: -16rem;
-  width: 100%;
+  left: auto;
+  width: 140%;
   height: 100%;
-}
-@media (max-width: 56.25em) {
-  .home-wrapper .arrow-small-left::before {
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: auto;
-    left: -10rem;
-  }
+  transform: translateX(-13rem);
 }
 @media (max-width: 37.5em) {
   .home-wrapper .arrow-small-left::before {
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: auto;
-    left: -13rem;
+    transform: translateX(-9rem);
     width: 30rem;
     height: 100%;
   }
@@ -1084,28 +1076,16 @@ main {
 .home-wrapper .arrow-small-right::before {
   position: absolute;
   top: 17%;
-  right: -16rem;
+  right: auto;
   bottom: auto;
   left: auto;
-  width: 100%;
+  width: 140%;
   height: 100%;
-}
-@media (max-width: 56.25em) {
-  .home-wrapper .arrow-small-right::before {
-    position: absolute;
-    top: 17%;
-    right: -10rem;
-    bottom: auto;
-    left: auto;
-  }
+  transform: translateX(13rem) rotateY(180deg);
 }
 @media (max-width: 37.5em) {
   .home-wrapper .arrow-small-right::before {
-    position: absolute;
-    top: 17%;
-    right: -13rem;
-    bottom: auto;
-    left: auto;
+    transform: translateX(12rem) rotateY(180deg);
     width: 30rem;
     height: 100%;
   }
@@ -1141,22 +1121,29 @@ main {
 .about-wrapper .arrow-big::before {
   position: absolute;
   top: auto;
-  right: -10.31rem;
-  bottom: 2.41rem;
-  left: auto;
-  width: 50vw;
+  right: auto;
+  bottom: 0;
+  left: -8rem;
+  width: 300%;
   height: 9.4rem;
   transform: rotateX(180deg);
 }
-@media (max-width: 56.25em) {
+@media (max-width: 85em) {
   .about-wrapper .arrow-big::before {
-    width: 46rem;
-    height: 9.4rem;
     position: absolute;
     top: auto;
     right: auto;
-    bottom: 2.41rem;
-    left: 8rem;
+    bottom: 0;
+    left: -2rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .about-wrapper .arrow-big::before {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
   }
 }
 .about-wrapper .arrow-small-left::before {
@@ -1164,26 +1151,14 @@ main {
   top: 0;
   right: auto;
   bottom: auto;
-  left: -16rem;
-  width: 100%;
+  left: auto;
+  width: 140%;
   height: 100%;
-}
-@media (max-width: 56.25em) {
-  .about-wrapper .arrow-small-left::before {
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: auto;
-    left: -10rem;
-  }
+  transform: translateX(-13rem);
 }
 @media (max-width: 37.5em) {
   .about-wrapper .arrow-small-left::before {
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: auto;
-    left: -13rem;
+    transform: translateX(-9rem);
     width: 30rem;
     height: 100%;
   }
@@ -1363,22 +1338,19 @@ main {
 .careers-wrapper .arrow-big::before {
   position: absolute;
   top: auto;
-  right: -10.31rem;
-  bottom: 2.41rem;
-  left: auto;
-  width: 50vw;
+  right: auto;
+  bottom: 0;
+  left: -4rem;
+  width: 300%;
   height: 9.4rem;
-  transform: rotateX(180deg);
 }
 @media (max-width: 56.25em) {
   .careers-wrapper .arrow-big::before {
-    width: 46rem;
-    height: 9.4rem;
     position: absolute;
     top: auto;
     right: auto;
-    bottom: 2.41rem;
-    left: 8rem;
+    bottom: 0;
+    left: 0;
   }
 }
 @media (max-width: 56.25em) {

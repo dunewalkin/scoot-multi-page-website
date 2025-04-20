@@ -11,10 +11,10 @@
 
 $breakpoints:(
    small: 37.5em,
-   medium: 56.25em,
    medium-extra: 43.68em,
+   medium: 56.25em,
    large: 70em,
-   x-large: 76em,
+   x-large: 85em,
 );
 
 @mixin mq($key) {
@@ -56,10 +56,30 @@ $breakpoints:(
      position: absolute;
      top: 50%;
      transform: translateY(-50%);
-     #{$direction}: $offset; // Использование переменных для направления и смещения
+     #{$direction}: $offset; 
      width: 100%;
      height: 100%;
      background-position: center center;
      background-size: cover;
    }
  }
+
+//  @keyframes fadeIn {
+//    from {
+//       opacity: 0;
+//    }
+//    to {
+//       opacity: 1;
+//    }
+// }
+
+// @keyframes slideInLeft {
+//    from {
+//       transform: translateX(-100%);
+//       opacity: 0;
+//    }
+//    to {
+//       transform: translateX(0);
+//       opacity: 1;
+//    }
+// }

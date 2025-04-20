@@ -27,13 +27,11 @@
    .arrow-big {
 
       &::before {
-         @include position(absolute, auto, -10.31rem, 2.41rem, auto);
-         @include width-height(50vw, 9.4rem);
-         transform: rotateX(180deg);
+         @include position(absolute, auto, auto, 0, -4rem);
+         @include width-height(300%, 9.4rem);
    
          @include mq(medium) {
-            @include width-height(46rem, 9.4rem);
-            @include position(absolute, auto, auto, 2.41rem, 8rem);
+            @include position(absolute, auto, auto, 0, 0);
          }
       }
    }
